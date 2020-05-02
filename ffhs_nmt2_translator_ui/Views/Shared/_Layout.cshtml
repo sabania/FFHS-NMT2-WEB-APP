@@ -145,7 +145,7 @@
                     $.ajax({
                         type: "POST",
                         data: JSON.stringify(sendInfo),
-                        url: 'http://ec2-34-220-80-68.us-west-2.compute.amazonaws.com/api/translation/var2/',
+                        url: window.location.origin+'/Home/Translate/',
                         contentType: "application/json",
                         dataType: 'json',
                         success: function (result) {
