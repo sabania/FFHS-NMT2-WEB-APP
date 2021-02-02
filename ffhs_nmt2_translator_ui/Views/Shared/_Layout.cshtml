@@ -97,7 +97,7 @@
                 $.ajax({
                     type: "POST",
                     data: JSON.stringify(sendInfo),
-                    url: 'http://ec2-34-220-80-68.us-west-2.compute.amazonaws.com/api/translation/var2/',
+                    url: 'http://ec2-34-211-237-104.us-west-2.compute.amazonaws.com/api/translation/var2/',
                     contentType: "application/json",
                     dataType: 'json',
                     success: function (result) {
@@ -124,7 +124,8 @@
             return currentsplit.slice(0, diffpos).join(" ");
         }
 
-        window.onkeypress = function (event) {
+        window.onkeydown = function (event) {
+            console.log(event.ctrlKey);
             if (event.code == "Space" && event.ctrlKey) {
                 $('#blink').removeClass('blink');
                 $('.changes').addClass('pulse');
@@ -144,7 +145,7 @@
                     $.ajax({
                         type: "POST",
                         data: JSON.stringify(sendInfo),
-                        url: 'http://ec2-34-220-80-68.us-west-2.compute.amazonaws.com/api/translation/var2/',
+                        url: 'http://ec2-34-211-237-104.us-west-2.compute.amazonaws.com/api/translation/var2/',
                         contentType: "application/json",
                         dataType: 'json',
                         success: function (result) {
@@ -165,7 +166,7 @@
 
         //$('#mt-output').keyup(
            // delay(function (e) {
- 
+
            // }, 2000))
 
         function getVerisonMarkup(newversion, oldversion, correction = '') {
